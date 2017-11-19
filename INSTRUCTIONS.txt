@@ -1,12 +1,12 @@
 1) Copy the folder structure and create all .java files.
 2) Create the jar, such that the folder structure is preserved [TODO: understand this better and explain in more detail].
-   This can be accomplished by opening a terminal in the /java/ folder and executing:
-   > javac a/b/c/E_jar.java 
-   > jar cf somejar.jar a/b/c/E_jar.class 
-   As a result, somejar.jar should be created in /java/.
+   This can be accomplished by opening a terminal in the /classpath_example/ folder and executing:
+   > javac a/b/c/E_jar.java
+   > jar cf somejar.jar a/b/c/E_jar.class
+   As a result, somejar.jar should be created in /classpath_example/.
 3) Compile the main class C_pck.java.
    This class uses multiple 'roots' and an external jar; it can be compiled as follows:
    NOTE: using ~/ instead of /home/joris/ does NOT WORK for classpaths after ':'!
-   > javac -cp /home/joris/Desktop/java/root1:/home/joris/Desktop/java/root2:/home/joris/Desktop/java/somejar.jar ~/Desktop/java/root1/dir2/C_pck.java
+   > javac -cp /home/joris/Desktop/classpath_example/root1:/home/joris/Desktop/classpath_example/root2:/home/joris/Desktop/classpath_example/somejar.jar ~/Desktop/classpath_example/root1/dir2/C_pck.java
 4) Run the main method:
-   > java -cp /home/joris/Desktop/java/root1:/home/joris/Desktop/java/root2:/home/joris/Desktop/java/somejar.jar dir2.C_pck
+   > java -cp /home/joris/Desktop/classpath_example/root1:/home/joris/Desktop/classpath_example/root2:/home/joris/Desktop/classpath_example/somejar.jar dir2.C_pck
